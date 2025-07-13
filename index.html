@@ -5,30 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>TastyBites - Home</title>
 
-  <!-- External CSS -->
+ 
   <link rel="stylesheet" href="styles.css" />
 
-  <!-- Font Awesome -->
+  
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-  <!-- Google Fonts -->
+  
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <!-- Toggle (hamburger) button -->
+  
 <div id="menu-toggle" onclick="toggleSidebar()">
   <i class="fas fa-bars"></i>
 </div>
 
-<!-- Sidebar (without logo, only close icon) -->
+ <!-- Sidebar -->
 <div id="sidebar">
-  <!-- Close button only -->
+ 
   <div class="sidebar-close">
     <span id="close-btn" onclick="toggleSidebar()">&times;</span>
   </div>
 
-  <!-- Sidebar items -->
+  
   <ul class="sidebar-menu">
     <li><a href="https://g.co/kgs/Z3JorFX"><i class="fas fa-map-marker-alt"></i> Kolkata, WB </a></li>
     <li><i class="fas fa-clock"></i> 10 AM – 10 PM</li>
@@ -51,7 +51,7 @@
   </div>
 </div>
 
-<!-- Hidden Checkbox Controller -->
+
 <input type="checkbox" id="feedback-toggle" hidden>
 
 <!-- Feedback Form Modal -->
@@ -68,7 +68,7 @@
   </div>
 </div>
 
-<!-- Hidden Checkbox -->
+
 <input type="checkbox" id="order-toggle" hidden>
 
 <!-- Order Form Modal -->
@@ -126,7 +126,7 @@
     <p>&copy; 2025 TastyBites. All rights reserved.</p>
   </footer>
 
-  <!-- JS for Sidebar -->
+  
   <script>
   function toggleSidebar() {
     document.getElementById("sidebar").classList.toggle("active");
