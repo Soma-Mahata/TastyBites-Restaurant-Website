@@ -4,10 +4,99 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>TastyBites - Home</title>
+
+  <!-- External CSS -->
   <link rel="stylesheet" href="styles.css" />
+
+  <!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
+
+  <!-- Toggle (hamburger) button -->
+<div id="menu-toggle" onclick="toggleSidebar()">
+  <i class="fas fa-bars"></i>
+</div>
+
+<!-- Sidebar (without logo, only close icon) -->
+<div id="sidebar">
+  <!-- Close button only -->
+  <div class="sidebar-close">
+    <span id="close-btn" onclick="toggleSidebar()">&times;</span>
+  </div>
+
+  <!-- Sidebar items -->
+  <ul class="sidebar-menu">
+    <li><a href="https://g.co/kgs/Z3JorFX"><i class="fas fa-map-marker-alt"></i> Kolkata, WB </a></li>
+    <li><i class="fas fa-clock"></i> 10 AM – 10 PM</li>
+    <label for="order-toggle" class="sidebar-link">
+  <i class="fas fa-shopping-cart"></i> Order Online
+</label>
+
+    <label for="feedback-toggle" class="sidebar-link">
+  <i class="fas fa-comment-alt"></i> Feedback
+</label>
+
+    <li><i class="fas fa-cog"></i> Settings</li>
+  </ul>
+
+  <!-- Social icons at bottom -->
+  <div class="sidebar-social">
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-facebook-f"></i></a>
+    <a href="#"><i class="fab fa-whatsapp"></i></a>
+  </div>
+</div>
+
+<!-- Hidden Checkbox Controller -->
+<input type="checkbox" id="feedback-toggle" hidden>
+
+<!-- Feedback Form Modal -->
+<div class="feedback-modal">
+  <div class="feedback-content">
+    <label for="feedback-toggle" class="close-btn">&times;</label>
+    <h2>Give Us Your Feedback</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message..." required></textarea>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</div>
+
+<!-- Hidden Checkbox -->
+<input type="checkbox" id="order-toggle" hidden>
+
+<!-- Order Form Modal -->
+<div class="order-modal">
+  <div class="order-content">
+    <label for="order-toggle" class="close-btn">&times;</label>
+    <h2>Place Your Order</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="tel" placeholder="Contact Number" required>
+      <select required>
+        <option value="">Select a Dish</option>
+        <option>Garlic Bread</option>
+        <option>Soup</option>
+        <option>Grilled Chicken </option>
+        <option>Paneer Butter Masala</option>
+        <option>Choco Lava Cake</option>
+        <option>Rasmalai</option>
+      </select>
+      <input type="number" placeholder="Quantity"  required>
+      <textarea placeholder="Delivery Address" required></textarea>
+      <button type="submit">Confirm Order</button>
+    </form>
+  </div>
+</div>
+
+
+  <!-- Navbar -->
   <header class="navbar">
     <div class="container nav-container">
       <h1 class="logo">TastyBites</h1>
@@ -23,6 +112,7 @@
     </div>
   </header>
 
+  <!-- Hero Section -->
   <section class="hero">
     <div class="overlay"></div>
     <div class="container hero-text">
@@ -35,5 +125,14 @@
   <footer>
     <p>&copy; 2025 TastyBites. All rights reserved.</p>
   </footer>
+
+  <!-- JS for Sidebar -->
+  <script>
+  function toggleSidebar() {
+    document.getElementById("sidebar").classList.toggle("active");
+  }
+</script>
+
+
 </body>
 </html>
